@@ -1,4 +1,3 @@
-
 public func main() -> Void {
 	let row = CoordinateRow()
 	let c1 = Coordinate(x:1,y:1)

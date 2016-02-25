@@ -15,7 +15,7 @@ public class FileScanner {
 
 	//reads a file until it encounters a delimiter, newline or EOF
 	public func next(delimiter: Character) -> String {
-		
+
 		var returnedString = String()
 		
 		while(true) {
@@ -36,7 +36,6 @@ public class FileScanner {
 
 			returnedString.append(char)
 		
-			
 		}
 
 		return String()
