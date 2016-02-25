@@ -62,6 +62,15 @@ Carthage/Build
 fastlane/report.xml
 fastlane/screenshots
 
+#modules, libraries etc
+*.swiftmodule
+*.swiftdoc
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+
 pirate
 snake
 longestpath
