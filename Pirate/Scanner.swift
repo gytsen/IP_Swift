@@ -11,11 +11,13 @@ public class Scanner {
 	private let NEW_LINE: Character = "\n"
 	private let EOF: Int32 = -1
 
+
 	private let file: UnsafeMutablePointer<FILE>
-	public var didEncounterEOF: Bool = false
+	public var didEncounterEOF: Bool
 
 	init(file: UnsafeMutablePointer<FILE>) {
 		self.file = file
+		self.didEncounterEOF = false
 	}
 
 	//reads a file until it encounters a delimiter, newline or EOF
