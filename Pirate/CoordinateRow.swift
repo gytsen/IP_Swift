@@ -30,7 +30,7 @@ public class CoordinateRow {
 	}
 
 	public func addCoordinateToFront(coordinate: Coordinate?) -> Void {
-		for var i = numberOfElements; i > 0; i-=1 {
+		for var i = numberOfElements; i > 0; i -= 1 {
 			row[i] = row[i-1]
 		}
 		row[0] = coordinate
@@ -45,10 +45,19 @@ public class CoordinateRow {
 	}
 
 	public func addCoordinateRowToFront(coordinateRow: CoordinateRow) -> Void {
-		for var i = coordinateRow.numberOfElements - 1; i > 0; i-=1 {
+		for var i = coordinateRow.numberOfElements - 1; i >= 0; i-=1 {
 			let coordinateToAdd: Coordinate? = coordinateRow.getElementAtIndex(i)
 			addCoordinateToFront(coordinateToAdd)
 		}
+	}
+
+	public func repr(separator: String = " ") -> String {
+		var stringRepresentation: String = String()
+		for var i = 0; i < self.numberOfElements; i++ {
+			stringRepresentation += self.getElementAtIndex(i)!.repr()
+			stringRepresentation += separator
+		}
+		return stringRepresentation
 	}
 
 

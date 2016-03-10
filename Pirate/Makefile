@@ -1,6 +1,6 @@
 SWIFTC=swiftc
 SFLAGS=
-SOURCES=main.swift Coordinate.swift CoordinateRow.swift
+SOURCES=main.swift Coordinate.swift CoordinateRow.swift Scanner.swift
 INCLUDES=.
 NAME=pirate
 

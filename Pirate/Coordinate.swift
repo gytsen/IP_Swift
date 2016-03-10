@@ -8,7 +8,16 @@ public class Coordinate {
 		self.y = y
 	}
 
-	public func AdjustWithCoordinate(coordinate: Coordinate) -> Void {
+	init(coordinate: Coordinate) {
+		self.x = coordinate.x
+		self.y = coordinate.y
+	}
+
+	public func repr() -> String {
+		return "\(self.x),\(self.y)"
+	}
+
+	public func adjustWithCoordinate(coordinate: Coordinate) -> Void {
 		self.x += coordinate.x
 		self.y += coordinate.y
 	}
